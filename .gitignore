@@ -1,0 +1,12 @@
+node_modules
+.nyc_output/
+coverage/
+local.js
+secret.yaml
+ecdsa-private.pem
+ecdsa-public.pem
+private_key.pem
+public_key.pem
+secret.js
+secret.yaml
+secret.json

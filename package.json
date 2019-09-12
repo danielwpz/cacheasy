@@ -1,0 +1,15 @@
+{
+  "name": "cacheasy",
+  "version": "0.1.0",
+  "description": "A node js cache library that supports multiple cache backends",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "author": "Daniel Wang",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "node-cache": "^4.2.1"
+  }
+}
