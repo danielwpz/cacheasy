@@ -2,28 +2,28 @@
 Multi-backend cache library for nodejs
 
 ## API
-1. CacheStore       
-    - new CacheStore(store)
+1. `CacheStore`       
+    - `new CacheStore(store)`
       Create a new cache store with given backend.
 
-    - CacheStore.cache(key, generator, options)     
+    - `CacheStore.cache(key, generator, options)`     
       Get the cached value for key. If cache missed, generator will be run and the returned value will be cached.      
       generator could either be a `async function` which returns a value, or a value it self.      
-      options.ttl: TTL
+      `options.ttl`: TTL
 
-    - CacheStore.set(key, generator, options)      
-      Simple set the key with generator.
-      options.ttl: TTL
+    - `CacheStore.set(key, generator, options)`      
+      Simple set the key with generator.        
+      `options.ttl`: TTL
 
-    - CacheStore.get(key)      
+    - `CacheStore.get(key)`      
       Get cached value for key.
 
-2. MemoryCacheStore
-    - new MemoryCacheStore()      
+2. `MemoryCacheStore`
+    - `new MemoryCacheStore()`      
       Create new memory based cache store.
 
-3. RedisCacheStore      
-    - new RedisCacheStore(redisOptions)     
+3. `RedisCacheStore`      
+    - `new RedisCacheStore(redisOptions)`     
       Create new redis based cache store.
       options: [ioredis](https://github.com/luin/ioredis/blob/master/API.md) options
 
