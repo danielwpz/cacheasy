@@ -1,8 +1,7 @@
 const Cacheasy = require('../index')
-const { MemoryCacheStore, RedisCacheStore } = Cacheasy.store
+const { RedisCacheStore } = Cacheasy.store
 const assert = require('assert')
 
-const memoryStore = new MemoryCacheStore()
 const redisStore = new RedisCacheStore()
 const cache = new Cacheasy(redisStore)
 
