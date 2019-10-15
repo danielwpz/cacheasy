@@ -1,10 +1,13 @@
 const Cacheasy = require('../index')
-const { MemoryCacheStore } = Cacheasy.store
+const { MemoryCacheStore, RedisCacheStore } = Cacheasy.store
 const assert = require('assert')
 
-const cache = new Cacheasy(new MemoryCacheStore())
+const memoryStore = new MemoryCacheStore()
+const redisStore = new RedisCacheStore()
+const cache = new Cacheasy(redisStore)
 
 async function test () {
+  console.log('running test')
   return cache.cache('foo', async () => 'bar')
 }
 

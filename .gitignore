@@ -10,3 +10,4 @@ public_key.pem
 secret.js
 secret.yaml
 secret.json
+.vscode
